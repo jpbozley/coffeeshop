@@ -1,5 +1,28 @@
 @use "./partials/_global.scss" as *;
 
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flash{
+    0%{
+        background-color: black;
+    }
+    50%{
+        background-color: #5BACC3;
+    }
+    100%{
+        background-color: black;
+    }
+}
 
 .banner {
     background-color: #FFF0ED;
@@ -49,7 +72,9 @@
         position: relative;
         bottom: 70px;
         right: 10px;
+        pointer-events: none;
     }
+
 }
 
 .products{
@@ -139,7 +164,8 @@
         border: 1px solid black;
         position: relative;
         bottom: 7rem;
-        left:2rem
+        left:2rem;
+        pointer-events: none;
     }
     &__button-link{
         text-decoration: none;
@@ -192,6 +218,7 @@
         position: relative;
         bottom: 70px;
         right: 10px;
+        pointer-events: none;
     }
     &__button-container{
         position:relative;
@@ -209,6 +236,11 @@
         justify-content: center;
         background-size: cover;
     }
+    &__spin:hover{
+        animation: spin 2s linear infinite;
+    }
+    
+
 }
 
 
@@ -226,6 +258,7 @@
     margin-top:10rem;
     margin-bottom:10rem;
     padding: 1rem;
+    animation: flash 2s infinite;
     &__description{
         font-size: 2.8rem;
         background-color: #393939;
@@ -233,6 +266,8 @@
         max-width: 90%;
         color: #fff;
         text-align: center;
+        animation: flash 2s infinite;
+
     }
     &__code{
         font-weight: bold;
