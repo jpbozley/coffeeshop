@@ -307,6 +307,12 @@ body {
   z-index: 1;
   border: 1px solid black;
 }
+.different__button:active {
+  position: absolute;
+  top: 1rem;
+  left: 1.4rem;
+  z-index: 1;
+}
 .different__button-background {
   width: 12.5rem;
   height: 3.5rem;
@@ -323,6 +329,7 @@ body {
 .different__button-link {
   font-style: none;
   text-decoration: none;
+  color: white;
 }
 .different__image {
   background-image: url(../assets/coldbrewbackground.png);
