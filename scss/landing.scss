@@ -1,5 +1,20 @@
 @use "./partials/_global.scss" as *;
 
+@mixin button-styling{
+    margin-top:1.5rem;
+    position: absolute;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.3rem;
+    text-decoration: none;
+    border:none;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    z-index: 1;
+    border: 1px solid black;
+}
+
 @keyframes spin {
     0%{
         transform: rotate(0deg);
@@ -54,18 +69,7 @@
         position:relative;
     }
     &__button{
-        margin-top:1.5rem;
-        position: absolute;
-        background-color: transparent;
-        color: #fff;
-        font-size: 1.3rem;
-        text-decoration: none;
-        border:none;
-        padding: 1rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        z-index: 1;
-        border: 1px solid black;
+        @include button-styling();
     }
     &__button-background{
         width: 7.8rem;
@@ -158,18 +162,7 @@
         position: relative;
     }
     &__button{
-        margin-top:1.5rem;
-        position: absolute;
-        background-color: transparent;
-        color: #fff;
-        font-size: 1.3rem;
-        text-decoration: none;
-        border:none;
-        padding: 1rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        z-index: 1;
-        border: 1px solid black;
+        @include button-styling();
     }
     &__button-background{
         width: 7.25rem;
@@ -221,18 +214,7 @@
         max-width: 4rem;
     }
     &__button{
-        margin-top:1.5rem;
-        position: absolute;
-        background-color: transparent;
-        color: #fff;
-        font-size: 1.3rem;
-        text-decoration: none;
-        border:none;
-        padding: 1rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        z-index: 1;
-        border: 1px solid black;
+        @include button-styling();
     }
     &__button:active{
         position: absolute;

@@ -1,6 +1,37 @@
 @use "./partials/_global.scss" as *;
 
+@mixin title-styling{
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-size: 3.75rem;
+    text-align: center;
+    margin-top: 0;
+    padding-top:1rem;
+};
 
+@mixin item-name-styling {
+    text-align: center;
+    margin: 0;
+    font-size: 2.0625rem;
+    font-weight: 300;   
+}
+
+@mixin description-styling{
+    font-style: italic;
+    text-align: center;
+    max-width: 33%;
+    margin:auto;
+    font-size: 1.125rem;
+}
+
+@mixin price-styling {
+    text-align: center;
+    color: #5BACC3;
+    margin-bottom: 0;
+    margin-top:0;
+    padding-bottom:1rem;
+    font-size: 1.2rem;
+}
 
 .banner {
     background-image: url(../assets/coffee-circle.jpg);
@@ -78,33 +109,16 @@
 .hot-drinks{
     background-color: #FFF0ED;
     &__title{
-        font-family: 'Open Sans';
-        font-weight: 300;
-        font-size: 3.75rem;
-        text-align: center;
-        margin-top: 0;
-        padding-top:1rem;
+        @include title-styling();
     }
     &__item-name{
-        text-align: center;
-        margin: 0;
-        font-size: 2.0625rem;
-        font-weight: 300;
+        @include item-name-styling();
     }
     &__description{
-        font-style: italic;
-        text-align: center;
-        max-width: 33%;
-        margin:auto;
-        font-size: 1.125rem;
+        @include description-styling();
     }
     &__price{
-        text-align: center;
-        color: #5BACC3;
-        margin-bottom: 0;
-        margin-top:0;
-        padding-bottom:1rem;
-        font-size: 1.2rem;
+        @include price-styling();
     }
 }
 
@@ -112,33 +126,16 @@
 .cold-drinks {
     background-color: #F7F7F7;
     &__title{
-        font-family: 'Open Sans';
-        font-weight: 300;
-        font-size: 3.75rem;
-        text-align: center;
-        margin-top: 0;
-        padding-top:1rem;
+        @include title-styling();
     }
     &__item-name{
-        text-align: center;
-        margin: 0;
-        font-size: 2.0625rem;
-        font-weight: 300;
+        @include item-name-styling();
     }
     &__description{
-        font-style: italic;
-        text-align: center;
-        max-width:33%;
-        margin:auto;
-        font-size: 1.125rem;
+        @include description-styling();
     }
     &__price{
-        text-align: center;
-        color: #5BACC3;
-        margin-bottom: 0;
-        margin-top:0;
-        padding-bottom:1rem;
-        font-size: 1.2rem;
+        @include price-styling()
     }
 }
 
@@ -146,33 +143,16 @@
 .pastries {
     background-color: #FFF0ED;
     &__title{
-        font-family: 'Open Sans';
-        font-weight: 300;
-        font-size: 3.75rem;
-        text-align: center;
-        margin-top: 0;
-        padding-top:1rem;
+        @include title-styling();
     }
     &__item-name{
-        text-align: center;
-        margin: 0;
-        font-size: 2.0625rem;
-        font-weight: 300;
+        @include item-name-styling();
     }
     &__description{
-        font-style: italic;
-        text-align: center;
-        max-width:33%;
-        margin:auto;
-        font-size: 1.125rem;
+        @include description-styling();
     }
     &__price{
-        text-align: center;
-        color: #5BACC3;
-        margin-bottom: 0;
-        margin-top:0;
-        padding-bottom:1rem;
-        font-size: 1.2rem;
+        @include price-styling();
     }
 }
 
